@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Breadcrumb, Menu } from 'antd';
+import { Layout, Breadcrumb, Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom';
 import './MainLayout.css'
 
@@ -15,14 +15,14 @@ class MainLayout extends Component {
                 <Layout theme="dark">
                     <Sider width={200}>
                         <Menu mode="inline" theme="dark">
-                            <SubMenu key="user" title='用户管理'>
+                            <SubMenu key="user" title={<span><Icon type="user" /><span>用户管理</span></span>}>
                                 <Menu.Item key="userList">
                                     <Link to="/pages/user/list">用户列表</Link>
                                 </Menu.Item>
                             </SubMenu>
-                            <SubMenu key="role" title='角色管理'>
+                            <SubMenu key="role" title={<span><Icon type="user" /><span>角色管理</span></span>}>
                                 <Menu.Item key="roleList">
-                                    <Link to="/pages/role/list">用户列表</Link>
+                                    <Link to="/pages/role/list">角色列表</Link>
                                 </Menu.Item>
                             </SubMenu>
                         </Menu>
